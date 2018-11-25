@@ -1,12 +1,13 @@
 #dictionaries: unordered collections of key-value pairs
 #they use KEYS to point VALUES
 #methods:
-    # update(<new key-value pair>)
+    # <dictionary_name>[<key>] = <value> #add a key-value pair to the dictionary
+    # update({<new key-value pair>})
     # pop(<key_value>) #deletes the key-value pair and returns the value
 
 numbers = {'one': 'uno', 'two': 'due'}
 print(numbers)
-numbers[3] = 'tre'
+numbers[3] = 'tre' #add the element '3': 'tre' to the dictionary
 numbers[True] = 'quattro'
 print(numbers)
 
