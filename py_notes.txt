@@ -1,0 +1,5 @@
+py_notes
+
+page 27 / 505
+
+myName = input() #wait for user input in the terminal, then assign it to the myName variable (which is string by default)
