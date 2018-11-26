@@ -10,6 +10,14 @@ from datetime import date as dt
 supportEmail = 'enrico.pascai@gmail.com'
 thisMonth = dt.today().month
 
+class Bill:
+
+
+billAmount = input('Please, enter the total amount of the bill: ')
+billMonth = input('Please, enter the month of the bill '
+                    '(1 = January; 12 = December)')
+
+
 selectMonth = input('Is the bill relative to the current month ('
                 + calendar.month_name[thisMonth]
                 + ')? [y/n] ')
