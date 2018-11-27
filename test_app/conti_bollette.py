@@ -31,11 +31,19 @@ class Bill:
         return amount_perCapita
 
 bill = Bill()
-bill.amount = float(input('Please, enter the total amount of the bill: '))
+bill.amount = float(input('Please, enter the total amount of the bill (use \'.\' as the decimal separator): '))
 bill.month = int(input('Please, enter the month of the bill '
                     '(1 = January; 12 = December): '))
 bill.year = int(input('Please, enter the year of the bill: '))
 bill.daysAbroad = int(input('Please, enter your number of days abroad: '))
+
+#control statements
+if bill.month < 1 or bill.month > 12:
+    print('\nThe input month exceed the constraints: month should be between January (1) and December (12)')
+    sys.exit('Please, launch again the application')
+elif bill.daysAbroad > calendar.monthrange(bill.year, bill.month)[1]:
+    print('\nDays abroad should not exceed the number of days of the selected month (equal to ' + str(calendar.monthrange(bill.year, bill.month)[1]) + ')')
+    sys.exit('Please, launch again the application')
 
 print('------------------------------------------------------\nRECAP')
 print('Amount of the bill: ' + str(bill.amount) + '€')
