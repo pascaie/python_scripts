@@ -1,0 +1,21 @@
+How to run python script in a fast way
+
+1) add the 'shebang' line at the top of your python script:
+  #! python3
+
+2) put the python script in a specific folder of your choice
+  (note that the folder must remain fixed in time in order to keep the script working)
+
+3) in the same folder, create a Windows batch file (.bat) with the following two lines of text:
+  @py.exe C:<folder_path>\<python_script_name.py> %*
+  @pause
+  (to perform this step, you can simply open Notepad, write down the line, and save the file as a .bat file)
+
+4) add the folder location to the Windows 'PATH' environment variable
+  i) in the start menu, type 'edit the system environment variables'
+  ii) in the newly open 'System Properties' window, select environment variables
+  iii) in the system variables, search for 'PATH' and edit it by adding the folder PATH
+
+5) now you can simply run your Python script by:
+  i) from the cmd, write the script name (even without '.py') and press enter
+  ii) from your desktop, press Win+R, type the script name (even without '.py') and press enter
